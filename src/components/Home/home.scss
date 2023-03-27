@@ -1,0 +1,94 @@
+.home {
+	background: url("../../assets/home/background-home-tablet.jpg") no-repeat
+		center/cover;
+
+	.overlay {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		text-align: center;
+		height: auto;
+
+		.overlay-info {
+			margin: 202px 0 142px 0;
+			width: 450px;
+
+			h2 {
+				font-style: normal;
+				font-weight: 400;
+				font-size: 1.2rem;
+				line-height: 24px;
+				letter-spacing: 3.375px;
+				color: #d0d6f9;
+			}
+
+			h1 {
+				font-family: "Bellefair";
+				font-style: normal;
+				font-weight: 400;
+				font-size: 9.3rem;
+				color: #ffffff;
+				padding-bottom: 15px;
+			}
+			p {
+				font-family: "Barlow Condensed", sans-serif;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 28px;
+				height: 112px;
+				color: #d0d6f9;
+			}
+		}
+
+		.btn-overlay button {
+			width: 242px;
+			height: 242px;
+			border-radius: 50%;
+			border: none;
+			background: #ffffff;
+			margin-bottom: 104px;
+			&:hover {
+				cursor: pointer;
+				background: #d0d6f9;
+				transition: ease-in-out 0.5s;
+			}
+
+			a {
+				font-size: 20px;
+				line-height: 37px;
+				letter-spacing: 2px;
+				color: #0b0d17;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.home {
+		background: url("../../assets/home/background-home-desktop.jpg") no-repeat
+			center/cover;
+	}
+}
+
+@media screen and (min-width: 769px) {
+	.home {
+		.overlay {
+			flex-direction: row;
+			width: 90%;
+			margin: 0 auto;
+		}
+
+		.overlay-info {
+			width: 450px;
+			flex-basis: 55%;
+			text-align: left;
+		}
+
+		.btn-overlay {
+			padding-top: 9rem;
+		}
+	}
+}
