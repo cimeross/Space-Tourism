@@ -8,12 +8,10 @@
 	padding-top: 40px;
 
 	.logo {
-		margin-left: 55px;
-		flex-basis: 20%;
+		margin-left: 20px;
 		a {
 			img {
-				height: 48px;
-				width: auto;
+				height: 42px;
 			}
 		}
 	}
@@ -124,7 +122,8 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			margin-right: 35px;
+			margin-right: 25px;
+			padding-bottom: 5px;
 
 			.menu-btn {
 				display: flex;
@@ -137,7 +136,7 @@
 				padding: 0;
 
 				img {
-					height: 30px;
+					height: 28px;
 					width: auto;
 					transition: all 0.3s ease-in-out;
 
@@ -158,8 +157,6 @@
 	}
 
 	@media screen and (max-width: 530px) {
-		.logo {
-			margin-left: 30px;
-		}
+		padding-top: 20px;
 	}
 }
