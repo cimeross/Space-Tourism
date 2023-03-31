@@ -1,15 +1,10 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
 import { destinations } from "../../data.json";
 import "./destination.scss";
 
 function Destination() {
 	const [planets] = useState(destinations);
 	const [value, setValue] = useState(0);
-
-	const isActive = (path) => {
-		return path === location.pathname;
-	};
 
 	const { name, images, description, distance, travel } = planets[value];
 	return (
