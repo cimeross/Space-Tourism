@@ -18,15 +18,17 @@ function Destination() {
 						<img src={images.png} />
 					</div>
 					<div className="planetDescription">
-						{planets.map((item, index) => (
-							<button
-								key={index}
-								onClick={() => setValue(index)}
-								className={value === index ? "active" : ""}
-							>
-								{item.name}
-							</button>
-						))}
+						<div className="planetsBtn">
+							{planets.map((item, index) => (
+								<button
+									key={index}
+									onClick={() => setValue(index)}
+									className={value === index ? "active" : ""}
+								>
+									{item.name}
+								</button>
+							))}
+						</div>
 
 						<h2>{name}</h2>
 						<p>{description}</p>
