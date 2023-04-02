@@ -1,11 +1,21 @@
+import { Link, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 import logo from "../../assets/shared/logo.svg";
 import "./header.scss";
-import { Link } from "react-router-dom";
 import menuOpen from "../../assets/shared/icon-hamburger.svg";
-import { useState } from "react";
 
 function Header() {
 	const [isNavOpen, setIsNavOpen] = useState(false);
+	const [value, setValue] = useState(0);
+	const location = useLocation();
+
+	useEffect(() => {
+		const path = location.pathname;
+		const linkIndex = navLinks.findIndex((link) => link.to === path);
+		if (linkIndex >= 0) {
+			setValue(linkIndex);
+		}
+	}, [location]);
 
 	const toggleNav = () => {
 		setIsNavOpen(!isNavOpen);
@@ -33,8 +43,12 @@ function Header() {
 				<nav className={isNavOpen ? "navbar active" : "navbar"}>
 					<ul className="nav-links">
 						{navLinks.map((link, index) => (
-							<li key={index}>
-								<Link to={link.to} onClick={handleLinkClick}>
+							<li key={index} onClick={() => setValue(index)}>
+								<Link
+									to={link.to}
+									onClick={handleLinkClick}
+									className={value === index ? "activeLink" : ""}
+								>
 									<span>0{index}</span> {link.label}
 								</Link>
 							</li>

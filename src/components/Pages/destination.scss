@@ -70,12 +70,11 @@ section {
 			p {
 				font-style: normal;
 				font-weight: 400;
-				font-size: 15px;
+				font-size: 17px;
 				line-height: 25px;
 				color: #d0d6f9;
 				padding-bottom: 32px;
 				border-bottom: 1px solid #383b4b;
-				height: 125px;
 			}
 
 			ul {
@@ -113,48 +112,140 @@ section {
 	}
 
 	@media screen and (min-width: 768px) {
+		background: url("../../assets/destination/background-destination-desktop.jpg")
+			no-repeat center/cover;
 		.planetWrapper {
+			flex-direction: row;
+
 			.planet {
 				padding-top: 100px;
 				display: flex;
 				flex-direction: column;
+				flex-basis: 35%;
 				width: 90%;
 
 				h1 {
 					align-self: flex-start;
-					font-size: 1.5rem;
+					font-size: 1.7rem;
 					padding-bottom: 60px;
 				}
 				img {
 					align-self: center;
-					max-width: 300px;
+					max-width: 350px;
 					max-height: auto;
 					padding-bottom: 53px;
 				}
 			}
 
 			.planetDescription {
-				button {
-					font-size: 1rem;
-					margin-bottom: 32px;
+				padding-top: 100px;
+				display: flex;
+				flex-direction: column;
+				flex-basis: 45%;
+				justify-content: center;
+
+				text-align: left;
+
+				.planetsBtn {
+					button {
+						font-size: 1rem;
+						margin-bottom: 32px;
+					}
 				}
 
 				h2 {
-					font-size: 5rem;
+					font-size: 5.5rem;
 				}
 
 				p {
 					font-size: 1.3rem;
-					padding-top: 20px;
+					margin: 20px 0 60px;
+					height: 170px;
+					line-height: 1.7rem;
 				}
 
 				ul {
-					width: 80%;
+					width: 100%;
 					margin: auto;
 					display: flex;
 					flex-direction: row;
-					justify-content: space-around;
 					padding-bottom: 62px;
+
+					li {
+						padding-right: 50px;
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: 769px) {
+		.planetWrapper {
+			padding-top: 100px;
+			height: 100vh;
+			.planet {
+				height: auto;
+				padding-top: 0;
+				text-align: left;
+				h1 {
+					font-size: 1.4rem;
+				}
+				img {
+					width: 300px;
+				}
+			}
+
+			.planetDescription {
+				ul {
+					padding-top: 0;
+					li {
+						span {
+							font-size: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: 1120px) {
+		.planetWrapper {
+			.planet {
+				h1 {
+					font-size: 1.7rem;
+				}
+				img {
+					width: 450px;
+				}
+			}
+			.planetDescription {
+				flex-basis: 50%;
+
+				.planetsBtn {
+					button {
+						font-size: 1.3rem;
+						margin-bottom: 32px;
+					}
+				}
+
+				h2 {
+					font-size: 7rem;
+				}
+
+				p {
+					font-size: 1.6rem;
+					margin: 30px 0;
+				}
+
+				ul {
+					li {
+						padding-right: 70px;
+						font-size: 1.2rem;
+
+						span {
+							font-size: 1.8rem;
+						}
+					}
 				}
 			}
 		}

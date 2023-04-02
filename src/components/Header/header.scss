@@ -17,56 +17,48 @@
 
 	.navbar {
 		display: flex;
-		flex-basis: 57%;
 		justify-content: center;
 		align-items: center;
+		flex-basis: 57%;
+		height: 96px;
 		background-color: rgba(255, 255, 255, 0.04);
 		backdrop-filter: blur(40.7742px);
-		height: 96px;
 		ul {
 			display: flex;
-			justify-content: flex-end;
+			justify-content: center;
 			align-items: center;
 			list-style: none;
 			margin: 0 25px 0 0;
 			padding: 0;
+			height: 100%;
 
 			li {
 				margin-left: 50px;
 				font-size: 16px;
+				display: flex;
+				align-items: center;
+				height: 100%;
+
 				a {
+					display: flex;
+					align-items: center;
 					font-family: "Barlow Condensed";
 					font-style: normal;
 					font-weight: 400;
-
+					height: 100%;
 					line-height: 19px;
 					letter-spacing: 2.7px;
 					text-transform: uppercase;
 					color: #ffffff;
 
-					&:before {
-						content: "";
-						position: absolute;
-						bottom: -4px;
-						left: 0;
-						width: 100%;
-						height: 2px;
-						background-color: #ffffff;
-						transform: scaleX(0);
-						transition: all 0.3s ease-in-out;
-						transform-origin: center center;
-					}
-
-					&:hover:before,
-					&:focus:before {
-						transform: scaleX(1);
-					}
-
 					span {
 						margin-right: 0.2rem;
-
 						color: #fff;
 					}
+				}
+
+				a.activeLink {
+					border-bottom: #d0d6f9 1px solid;
 				}
 			}
 		}
@@ -86,17 +78,17 @@
 
 				ul {
 					flex-direction: column;
+					justify-content: flex-start;
 					margin: 8rem 0 0 0;
-
 					padding: 2rem 0;
 
 					li {
 						margin: 0;
-						padding: 1.2rem 0;
+						padding: 2.2rem 0;
+						height: auto;
 
 						a {
 							font-size: 1.5rem;
-							color: white;
 
 							&:hover,
 							&:focus {
@@ -107,7 +99,21 @@
 								background: rgba(255, 255, 255, 0.04);
 								backdrop-filter: blur(40.7742px);
 							}
+
+							span {
+								display: flex;
+								margin-right: 10px;
+								color: #bec3e2;
+							}
 						}
+
+						a.activeLink {
+							border-bottom: none;
+						}
+					}
+
+					li.active {
+						border-bottom: #d0d6f9 2px solid;
 					}
 				}
 			}
@@ -149,6 +155,12 @@
 
 	@media (max-width: 1079px) {
 		.navbar {
+			li {
+				height: 100%;
+				a.activeLink {
+					border-bottom: #d0d6f9 1px solid;
+				}
+			}
 			span {
 				display: none;
 			}
@@ -175,6 +187,9 @@
 				img {
 					height: 48px;
 				}
+			}
+			a.activeLink {
+				border-bottom: #d0d6f9 1px solid;
 			}
 		}
 	}
