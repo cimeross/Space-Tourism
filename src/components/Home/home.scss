@@ -1,0 +1,162 @@
+.home {
+	background: url("../../assets/home/background-home-desktop.jpg") no-repeat
+		center/cover;
+
+	.overlay {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		text-align: left;
+		width: 80%;
+		margin: auto;
+
+		.overlay-info {
+			margin: 251px 0 142px 0;
+			width: 450px;
+
+			h2 {
+				font-style: normal;
+				font-weight: 400;
+				font-size: 1.2rem;
+				line-height: 24px;
+				letter-spacing: 3.375px;
+				color: #d0d6f9;
+				font-family: "Barlow Condensed", sans-serif;
+			}
+
+			h1 {
+				font-family: "Bellefair";
+				font-style: normal;
+				font-weight: 400;
+				font-size: 9.3rem;
+				color: #ffffff;
+				padding-bottom: 15px;
+			}
+			p {
+				font-family: "Barlow Condensed", sans-serif;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 28px;
+				height: 112px;
+				color: #d0d6f9;
+				letter-spacing: 1.2px;
+			}
+		}
+
+		.btn-overlay {
+			padding-top: 7rem;
+			button {
+				width: 242px;
+				height: 242px;
+				border-radius: 50%;
+				border: none;
+				background: #ffffff;
+
+				&:hover {
+					cursor: pointer;
+					background: #d0d6f9;
+					transition: ease-in-out 0.5s;
+				}
+
+				a {
+					font-size: 20px;
+					line-height: 37px;
+					letter-spacing: 2px;
+					color: #0b0d17;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.home {
+		.overlay {
+			width: 90%;
+			.overlay-info {
+				h2 {
+					font-size: 1rem;
+				}
+				h1 {
+					font-size: 8rem;
+				}
+			}
+			.btn-overlay {
+				button {
+					width: 200px;
+					height: 200px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.home {
+		background: url("../../assets/home/background-home-tablet.jpg") no-repeat
+			center/cover;
+
+		.overlay {
+			flex-direction: column;
+			text-align: center;
+			justify-content: space-around;
+
+			.overlay-info {
+				h2 {
+					font-size: 1.2rem;
+					padding-bottom: 24px;
+				}
+
+				h1 {
+					font-size: 9rem;
+				}
+			}
+
+			.btn-overlay {
+				padding: 0 0 5rem 0;
+				button {
+					width: 240px;
+					height: 240px;
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.home {
+		background: url("../../assets/home/background-home-mobile.jpg") no-repeat
+			center/cover;
+	}
+}
+
+@media screen and (max-width: 530px) {
+	.home {
+		.overlay {
+			.overlay-info {
+				width: 320px;
+				margin: 150px 0 142px 0;
+
+				h1 {
+					font-size: 7rem;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 950px) {
+	.home {
+		.overlay {
+			.overlay-info {
+				p {
+					font-size: 1.3rem;
+				}
+			}
+		}
+	}
+}
