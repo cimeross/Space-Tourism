@@ -1,8 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import logo from "../../assets/shared/logo.svg";
+import logo from "../../../public/assets/shared/logo.svg";
 import "./header.scss";
-import menuOpen from "../../assets/shared/icon-hamburger.svg";
+import menuOpen from "../../../public/assets/shared/icon-hamburger.svg";
 
 function Header() {
 	const [isNavOpen, setIsNavOpen] = useState(false);
