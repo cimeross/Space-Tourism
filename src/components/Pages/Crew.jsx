@@ -14,7 +14,7 @@ export default function Crew() {
 			<div className="crew">
 				<div className="crew_heading">
 					<h2>
-						<span>02</span> Meet your crew
+						<span>02</span>Meet your crew
 					</h2>
 					<div className="crew_image">
 						<img src={images.png} />
